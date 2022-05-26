@@ -226,7 +226,7 @@ HELP_STICKER = ["CAADAgADYgADWbv8JXMOJcSM3-2OAg",
 
 #Menu Btn
 
-REPLY_BUTTONS = ReplyKeyboardMarkup(
+start_menu = ReplyKeyboardMarkup(
       [
             ["🤴 OWNER 🤴"],
             ["💻 Bot Devs 💻", "👮‍♂️ MemeHub Admins 👮‍♂️"],
@@ -236,7 +236,7 @@ REPLY_BUTTONS = ReplyKeyboardMarkup(
         resize_keyboard=True  # Make the keyboard smaller
     )
 
-NEXT_1 = ReplyKeyboardMarkup(
+next_1 = ReplyKeyboardMarkup(
       [
             ["Thama Mukut na"],
             ["BACK 🔙"]
@@ -244,7 +244,16 @@ NEXT_1 = ReplyKeyboardMarkup(
         ],
         resize_keyboard=True  # Make the keyboard smaller
       )
-      
+
+back = ReplyKeyboardMarkup(
+      [
+            ["🤴 OWNER 🤴"],
+            ["💻 Bot Devs 💻", "👮‍♂️ MemeHub Admins 👮‍♂️"],
+            ["NEXT 🔜"]
+           
+        ],
+        resize_keyboard=True  # Make the keyboard smaller
+      )     
 
 
 
