@@ -43,7 +43,7 @@ back = ReplyKeyboardMarkup(
 async def startprivate(bot, message):
      await bot.send_sticker(message.chat.id, random.choice(OWNER_STICKER),reply_markup=OWNER_BTN)
 
-     @Client.on_message(filters.regex(pattern="🤴 OWNER 🤴"))   
+@Client.on_message(filters.regex(pattern="🤴 OWNER 🤴"))   
 async def startprivate(bot, message):
      text=f"""**Bot Advanced Statistics 📊**
 ** 👥Members Counts in Our channel:**
