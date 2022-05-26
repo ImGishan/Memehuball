@@ -49,7 +49,7 @@ async def startprivate(bot, message):
 ** 👥Members Counts in Our channel:**
 
 ✪ MemeHub Telegram 🇱🇰 : `{count}`"""
-     count = await bot.get_chat_members_count(-1001797172159)
+     count = await bot.get_chat_members_count(-1001628089214)
      await bot.send_sticker(message.chat.id, random.choice(STAT_STICKER))
      await bot.send_message(message.chat.id, text=text)
 
