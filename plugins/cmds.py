@@ -69,7 +69,17 @@ async def help(bot, message):
 async def startprivate(bot, message):
      await bot.send_sticker(message.chat.id, random.choice(OWNER_STICKER),reply_markup=OWNER_BTN)
 
-@Client.on_message(filters.regex(pattern="💻 Bot Devs 💻"))   
+     @Client.on_message(filters.regex(pattern="🤴 OWNER 🤴"))   
+async def startprivate(bot, message):
+     text=f"""**Bot Advanced Statistics 📊**
+** 👥Members Counts in Our channel:**
+
+✪ MemeHub Telegram 🇱🇰 : `{count}`"""
+     count = await bot.get_chat_members_count(-1001797172159)
+     await bot.send_sticker(message.chat.id, random.choice(STAT_STICKER))
+     await bot.send_message(message.chat.id, text=text)
+
+     @Client.on_message(filters.regex(pattern="💻 Bot Devs 💻"))   
 async def startprivate(bot, message):
      await bot.send_sticker(message.chat.id, random.choice(DEV_STICKER),reply_markup=DEV_BTN)
 
