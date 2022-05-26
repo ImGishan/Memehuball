@@ -9,8 +9,8 @@ from pyrogram.types import *
 from .config import *
 
 
-@Client.on_message(filters.private & filters.command("start"))
-async def startprivate(bot, message):
+@Client.on_message(filters.command("start"))
+async def start(bot, message):
     if force_subchannel:
         try:
             user = await bot.get_chat_member(force_subchannel, message.from_user.id)
@@ -39,7 +39,7 @@ async def startprivate(bot, message):
     )
 
 @Client.on_message(filters.command(["help", "help@MemeHubTgSl_Bot"]))
-async def startprivate(bot, message):
+async def help(bot, message):
     if force_subchannel:
         try:
             user = await bot.get_chat_member(force_subchannel, message.from_user.id)
@@ -56,7 +56,7 @@ async def startprivate(bot, message):
             reply_markup=reply_markup
             ) 
             return
-    await bot.send_sticker(message.chat.id, random.choice(HELP_STICKER))
+    await bot.send_sticker(message.chat.id, random.choice(HELP_STICKER), reply_markup=REPLY_BUTTONS)
     await message.reply_text(
         text=HELP_STRING,
         reply_markup=CLOSE_BUTTON,
