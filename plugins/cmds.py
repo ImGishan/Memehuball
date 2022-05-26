@@ -8,7 +8,7 @@ from pyrogram.errors import *
 from pyrogram.types import *
 from .config import *
 
- -------------------------------------------#menu Regex-----------------------------------------         
+ #-------------------------------------------menu Regex-----------------------------------------#         
   
 @Client.on_message(filters.private & filters.regex(pattern="🤴 OWNER 🤴"))   
 async def startprivate(bot, message):
@@ -35,7 +35,7 @@ async def startprivate(bot, message):
      )
 
  
- ----------------------------------------------#main Cmds---------------------------------------------
+ #----------------------------------------------main Cmds---------------------------------------------#
 
        
         
