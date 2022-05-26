@@ -238,7 +238,7 @@ start_menu = ReplyKeyboardMarkup(
 
 next_1 = ReplyKeyboardMarkup(
       [
-            ["Thama Mukut na"],
+            ["📊 Statistics"],
             ["BACK 🔙"]
            
         ],
