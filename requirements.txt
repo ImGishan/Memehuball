@@ -1,8 +1,4 @@
 pyrogram
-python-dotenv
-redis
-tgcrypto
-pyrogram
 requests
 wget
 asyncio
@@ -16,4 +12,5 @@ telegraph
 youtube_search
 pytube
 Python_ARQ
+TgCrypto
 random
