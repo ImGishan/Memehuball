@@ -1,4 +1,7 @@
 pyrogram
+python-dotenv
+redis
+pyrogram
 requests
 wget
 asyncio
