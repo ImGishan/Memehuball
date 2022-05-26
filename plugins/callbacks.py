@@ -51,7 +51,7 @@ async def tgm(bot, update):
          await update.answer(
              text="👻 ʜᴇᴍʟᴘ 👻",
          )
-    elif update.data == "cloc":
+    elif update.data == "cloce":
          await update.message.delete()
     elif update.data == "ref": 
         await update.answer(
