@@ -7,7 +7,73 @@ from pyrogram import Client, filters
 from pyrogram.errors import *
 from pyrogram.types import *
 from .config import *
-     
+
+#--------------------------------------configs-------------------------------------------#
+start_menu = ReplyKeyboardMarkup(
+      [
+            ["🤴 OWNER 🤴"],
+            ["💻 Bot Devs 💻", "👮‍♂️ MemeHub Admins 👮‍♂️"],
+            ["NEXT 🔜"]
+           
+        ],
+        resize_keyboard=True  # Make the keyboard smaller
+    )
+
+next_1 = ReplyKeyboardMarkup(
+      [
+            ["📊 Statistics"],
+            ["BACK 🔙"]
+           
+        ],
+        resize_keyboard=True  # Make the keyboard smaller
+      )
+
+back = ReplyKeyboardMarkup(
+      [
+            ["🤴 OWNER 🤴"],
+            ["💻 Bot Devs 💻", "👮‍♂️ MemeHub Admins 👮‍♂️"],
+            ["NEXT 🔜"]
+           
+        ],
+        resize_keyboard=True  # Make the keyboard smaller
+      )
+#-------------------------------------------menu Regex-----------------------------------------#         
+  
+@Client.on_message(filters.regex(pattern="🤴 OWNER 🤴"))   
+async def startprivate(bot, message):
+     await bot.send_sticker(message.chat.id, random.choice(OWNER_STICKER),reply_markup=OWNER_BTN)
+
+     @Client.on_message(filters.regex(pattern="🤴 OWNER 🤴"))   
+async def startprivate(bot, message):
+     text=f"""**Bot Advanced Statistics 📊**
+** 👥Members Counts in Our channel:**
+
+✪ MemeHub Telegram 🇱🇰 : `{count}`"""
+     count = await bot.get_chat_members_count(-1001797172159)
+     await bot.send_sticker(message.chat.id, random.choice(STAT_STICKER))
+     await bot.send_message(message.chat.id, text=text)
+
+     @Client.on_message(filters.regex(pattern="💻 Bot Devs 💻"))   
+async def startprivate(bot, message):
+     await bot.send_sticker(message.chat.id, random.choice(DEV_STICKER),reply_markup=DEV_BTN)
+
+@Client.on_message(filters.regex(pattern="👮‍♂️ MemeHub Admins 👮‍♂️"))   
+async def startprivate(bot, message):
+     await bot.send_sticker(message.chat.id, random.choice(ADMIN_STICKER),reply_markup=ADMIN_BTN)
+    
+@Client.on_message(filters.regex(pattern="NEXT 🔜"))   
+async def startprivate(bot, message):
+     await bot.send_message(message.chat.id, text='NEXT 🔜',reply_markup=next_1)
+        
+@Client.on_message(filters.regex(pattern="BACK 🔙"))   
+async def startprivate(bot, message):
+     await bot.send_message(message.chat.id, text='BACK 🔙',reply_markup=start_menu)
+
+ 
+ #----------------------------------------------main Cmds---------------------------------------------#
+
+
+#----------------------------------main cmdd-------------------------------------#
         
 @Client.on_message(filters.command("start"))
 async def start(bot, message):
@@ -63,40 +129,6 @@ async def help(bot, message):
         disable_web_page_preview=True
          )
 
-#-------------------------------------------menu Regex-----------------------------------------#         
-  
-@Client.on_message(filters.regex(pattern="🤴 OWNER 🤴"))   
-async def startprivate(bot, message):
-     await bot.send_sticker(message.chat.id, random.choice(OWNER_STICKER),reply_markup=OWNER_BTN)
-
-     @Client.on_message(filters.regex(pattern="🤴 OWNER 🤴"))   
-async def startprivate(bot, message):
-     text=f"""**Bot Advanced Statistics 📊**
-** 👥Members Counts in Our channel:**
-
-✪ MemeHub Telegram 🇱🇰 : `{count}`"""
-     count = await bot.get_chat_members_count(-1001797172159)
-     await bot.send_sticker(message.chat.id, random.choice(STAT_STICKER))
-     await bot.send_message(message.chat.id, text=text)
-
-     @Client.on_message(filters.regex(pattern="💻 Bot Devs 💻"))   
-async def startprivate(bot, message):
-     await bot.send_sticker(message.chat.id, random.choice(DEV_STICKER),reply_markup=DEV_BTN)
-
-@Client.on_message(filters.regex(pattern="👮‍♂️ MemeHub Admins 👮‍♂️"))   
-async def startprivate(bot, message):
-     await bot.send_sticker(message.chat.id, random.choice(ADMIN_STICKER),reply_markup=ADMIN_BTN)
-    
-@Client.on_message(filters.regex(pattern="NEXT 🔜"))   
-async def startprivate(bot, message):
-     await bot.send_message(message.chat.id, text='NEXT 🔜',reply_markup=next_1)
-        
-@Client.on_message(filters.regex(pattern="BACK 🔙"))   
-async def startprivate(bot, message):
-     await bot.send_message(message.chat.id, text='BACK 🔙',reply_markup=start_menu)
-
- 
- #----------------------------------------------main Cmds---------------------------------------------#
                        
 print("cmds.py Working....")
 
