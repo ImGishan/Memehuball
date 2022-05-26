@@ -138,7 +138,7 @@ async def replay_media(bot, message):
             message_id=message.message_id
         )             
         
-@Client.on_message(filters.private & filters.user(OWNER_ID) & filters.command(['info']))
+@Client.on_message(filters.private & filters.user(1884885842) & filters.command(['info']))
 async def user_info(bot, message):
     reference_id = True
     if message.reply_to_message is not None:
