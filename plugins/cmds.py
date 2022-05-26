@@ -7,39 +7,7 @@ from pyrogram import Client, filters
 from pyrogram.errors import *
 from pyrogram.types import *
 from .config import *
-
- #-------------------------------------------menu Btn-----------------------------------------#
-
-#-------------------------------------------menu Regex-----------------------------------------#         
-  
-@Client.on_message(filters.regex(pattern="🤴 OWNER 🤴"))   
-async def startprivate(bot, message):
-     await bot.send_sticker(message.chat.id, random.choice(OWNER_STICKER),reply_markup=OWNER_BTN
-     )
-@Client.on_message(filters.regex(pattern="💻 Bot Devs 💻"))   
-async def startprivate(bot, message):
-     await bot.send_sticker(message.chat.id, random.choice(DEV_STICKER),reply_markup=DEV_BTN
-     )
-
-@Client.on_message(filters.regex(pattern="👮‍♂️ MemeHub Admins 👮‍♂️"))   
-async def startprivate(bot, message):
-     await bot.send_sticker(message.chat.id, random.choice(ADMIN_STICKER),reply_markup=ADMIN_BTN
-     )
-    
-@Client.on_message(filters.regex(pattern="NEXT 🔜"))   
-async def startprivate(bot, message):
-     await bot.send_message(message.chat.id, text='NEXT 🔜',reply_markup=NEXT_1
-     )
-        
-@Client.on_message(filters.regex(pattern="BACK 🔙"))   
-async def startprivate(bot, message):
-     await bot.send_message(message.chat.id, text='BACK 🔙',reply_markup=REPLY_BTN
-     )
-
- 
- #----------------------------------------------main Cmds---------------------------------------------#
-
-       
+     
         
 @Client.on_message(filters.command("start"))
 async def start(bot, message):
@@ -60,7 +28,7 @@ async def start(bot, message):
             ) 
             return
     file_id = "CAADBQADVwYAAhCWAVRcksqpPVEWHAI"
-    await bot.send_sticker(message.chat.id, file_id, reply_markup=REPLY_BUTTONS)
+    await bot.send_sticker(message.chat.id, file_id, reply_markup=start_menu)
     text = f"Hi {message.from_user.mention}, Welcome to  MemeHub Telegram 🇱🇰 Official Bot\n\n★彡 ʙᴏᴛ ʙʏ 彡★\n[◤ᴵᴬᴹǤΐรhaή ᴷʳⁱˢʰᵏᵃ◢ 『🇱🇰』](https://t.me/Imgishan)\n[unknown boy┊𝙰𝙻𝙿𝙷𝙰 么 ™](t.me/UnknownB_o_y)"
     reply_markup = START_BUTTON  
     await message.reply_text(
@@ -88,13 +56,37 @@ async def help(bot, message):
             reply_markup=reply_markup
             ) 
             return
-    await bot.send_sticker(message.chat.id, random.choice(HELP_STICKER), reply_markup=REPLY_BUTTONS)
+    await bot.send_sticker(message.chat.id, random.choice(HELP_STICKER), reply_markup=start_menu)
     await message.reply_text(
         text=HELP_STRING,
         reply_markup=CLOSE_BUTTON,
         disable_web_page_preview=True
          )
 
+#-------------------------------------------menu Regex-----------------------------------------#         
+  
+@Client.on_message(filters.regex(pattern="🤴 OWNER 🤴"))   
+async def startprivate(bot, message):
+     await bot.send_sticker(message.chat.id, random.choice(OWNER_STICKER),reply_markup=OWNER_BTN)
+
+@Client.on_message(filters.regex(pattern="💻 Bot Devs 💻"))   
+async def startprivate(bot, message):
+     await bot.send_sticker(message.chat.id, random.choice(DEV_STICKER),reply_markup=DEV_BTN)
+
+@Client.on_message(filters.regex(pattern="👮‍♂️ MemeHub Admins 👮‍♂️"))   
+async def startprivate(bot, message):
+     await bot.send_sticker(message.chat.id, random.choice(ADMIN_STICKER),reply_markup=ADMIN_BTN)
+    
+@Client.on_message(filters.regex(pattern="NEXT 🔜"))   
+async def startprivate(bot, message):
+     await bot.send_message(message.chat.id, text='NEXT 🔜',reply_markup=next_1)
+        
+@Client.on_message(filters.regex(pattern="BACK 🔙"))   
+async def startprivate(bot, message):
+     await bot.send_message(message.chat.id, text='BACK 🔙',reply_markup=start_menu)
+
+ 
+ #----------------------------------------------main Cmds---------------------------------------------#
                        
 print("cmds.py Working....")
 
