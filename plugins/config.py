@@ -32,7 +32,7 @@ FORCESUB_BUTTONS = InlineKeyboardMarkup([[
                   )
                   
 CLOSE_BUTTON = InlineKeyboardMarkup([[
-                 InlineKeyboardButton("𝕮𝖑𝖔𝖒𝖘𝖊", callback_data="cloc")
+                 InlineKeyboardButton("𝕮𝖑𝖔𝖒𝖘𝖊", callback_data="cloce")
                  ]]
                  )
                                                     
