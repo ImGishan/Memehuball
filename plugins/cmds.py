@@ -53,7 +53,7 @@ async def startprivate(bot, message):
      await bot.send_sticker(message.chat.id, random.choice(STAT_STICKER))
      await bot.send_message(message.chat.id, text=text)
 
-     @Client.on_message(filters.regex(pattern="💻 Bot Devs 💻"))   
+@Client.on_message(filters.regex(pattern="💻 Bot Devs 💻"))   
 async def startprivate(bot, message):
      await bot.send_sticker(message.chat.id, random.choice(DEV_STICKER),reply_markup=DEV_BTN)
 
