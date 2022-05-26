@@ -203,7 +203,11 @@ OWNER_STICKER = ["CAADAgADtA8AAhUWiEuTU2os6PSW-AI",
                 "CAADAgADtwEAAladvQr3FVtdLiA1jgI", 
                 "CAADBQADSwQAAnxrOFaYSIaXhBE_YAI"              
          ]
-         
+
+STAT_STICKER = ["CAADAQAD7gMAAv5DwUe0nbeQnSoavAI",
+                "CAADAgAD8QEAAladvQohKm5i6iYv7gI"              
+         ]  
+
 ADMIN_STICKER = ["CAADAgADzhMAAhDzcElTIbO4ZQ8stAI",
                 "CAADBQADxwQAAgcbUFea8nhgWIiuGwI",
                 "CAADBQADPAUAAtzIoFWtMe3LazkiKQI", 
