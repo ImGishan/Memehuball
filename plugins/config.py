@@ -1,7 +1,4 @@
 import os
-
-from dotenv import find_dotenv, load_dotenv
-load_dotenv(find_dotenv())
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, InputMediaPhoto, InputTextMessageContent
 from pyrogram.types import (Message, InlineQueryResultArticle, InputTextMessageContent,
                             InlineKeyboardMarkup, InlineKeyboardButton, InlineQueryResultPhoto, ReplyKeyboardMarkup, InlineQueryResultVideo)
