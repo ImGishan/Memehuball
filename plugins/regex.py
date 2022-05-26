@@ -1,4 +1,5 @@
 import os
+import random
 from pyrogram import Client, filters
 from pyrogram.errors import *
 from pyrogram.types import *
@@ -21,4 +22,9 @@ async def startprivate(bot, message):
 @Client.on_message(filters.private & filters.regex(pattern="NEXT 🔜"))   
 async def startprivate(bot, message):
      await bot.send_message(message.chat.id, text='NEXT 🔜',reply_markup=NEXT_1
+     )
+        
+@Client.on_message(filters.private & filters.regex(pattern="BACK 🔙"))   
+async def startprivate(bot, message):
+     await bot.send_message(message.chat.id, text='BACK 🔙',reply_markup=REPLY_BTN
      )
